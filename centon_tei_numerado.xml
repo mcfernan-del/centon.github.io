@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Centón de Alonso Ramírez de Vargas (c.1682) — versión numerada</title>
+        <author>Alonso Ramírez de Vargas</author>
+      </titleStmt>
+      <publicationStmt>
+        <p>Transcripción y marcado en TEI por Usuario</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Fuente: Estrofa inicial del centón (17 vv.).</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <lg n="1">
+        <l n="1">
+          <seg>1. La proa diligente</seg>
+          <caesura/>
+          <seg>de poca arena</seg>
+        </l>
+        <l n="2">
+          <seg>2. No solo dirigió</seg>
+          <caesura/>
+          <seg>desatinado</seg>
+        </l>
+        <l n="3">
+          <seg>3. El Príncipe troyano</seg>
+          <caesura/>
+          <seg>peregrino</seg>
+        </l>
+        <l n="4">
+          <seg>4. Mas redujo la terrible</seg>
+          <caesura/>
+          <seg>una y otra almena</seg>
+        </l>
+        <l n="5">
+          <seg>5. Cuando, de amor,</seg>
+          <caesura/>
+          <seg>mira reverente</seg>
+        </l>
+        <l n="6">
+          <seg>6. Deidad, que en más</seg>
+          <caesura/>
+          <seg>se venera culta</seg>
+        </l>
+        <l n="7">
+          <seg>7. Triunfando del agua</seg>
+          <caesura/>
+          <seg>que la oculta</seg>
+        </l>
+        <l n="8">
+          <seg>8. Aun contra <persName type="myth">Orión</persName></seg>
+          <caesura/>
+          <seg>humedecido</seg>
+        </l>
+        <l n="9">
+          <seg>9. Que Ter quiso en el mar</seg>
+          <caesura/>
+          <seg>sin cobardía</seg>
+        </l>
+        <l n="10">
+          <seg>10. Al <placeName>Frigio</placeName> muro</seg>
+          <caesura/>
+          <seg>y resistencia al día</seg>
+        </l>
+        <l n="11">
+          <seg>11. Del mar siempre sonante</seg>
+          <caesura/>
+          <seg>más seguro</seg>
+        </l>
+        <l n="12">
+          <seg>12. Dios margen pisó</seg>
+          <caesura/>
+          <seg>ameno en onda</seg>
+        </l>
+        <l n="13">
+          <seg>13. Por este culto bien</seg>
+          <caesura/>
+          <seg>de un <rs type="astral">Sol</rs> luciente</seg>
+        </l>
+        <l n="14">
+          <seg>14. El oráculo dulce</seg>
+          <caesura/>
+          <seg>le responde</seg>
+        </l>
+        <l n="15">
+          <seg>15. Con regalado son</seg>
+          <caesura/>
+          <seg>al aire puro</seg>
+        </l>
+        <l n="16">
+          <seg>16. Lauro por premio</seg>
+          <caesura/>
+          <seg>graduadamente</seg>
+        </l>
+        <l n="17">
+          <seg>17. Ofrece alegre</seg>
+          <caesura/>
+          <seg><persName type="divine">Dios Omnipotente</persName></seg>
+        </l>
+      </lg>
+    </body>
+  </text>
+</TEI>

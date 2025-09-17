@@ -1,0 +1,87 @@
+/* TEI → HTML5 via CETEIcean custom elements
+   Custom design for the centón (c.1682) with toggle between clean/numbered versions
+*/
+
+#TEI {
+  --page-pad: clamp(1rem, 2.5vw, 2rem);
+  --gap: .2rem;
+  --ink: #e7ecf4;
+  --muted: #9fb3c8;
+  --accent: #58a6ff;
+  --accent-2: #f0c674;
+  --line-bg: rgba(255,255,255,0.02);
+  --line-bg-hover: rgba(88,166,255,0.09);
+  --caesura: " \2016 ";
+  padding: var(--page-pad);
+}
+
+tei-text, tei-body, tei-lg { display: block; }
+
+tei-l {
+  display: block;
+  position: relative;
+  padding: .2rem .5rem .2rem 3.5rem;
+  margin: 0;
+  border-radius: 8px;
+  background: var(--line-bg);
+  transition: background-color .2s ease, transform .05s ease;
+}
+tei-l:nth-of-type(odd) { background: color-mix(in oklab, var(--line-bg) 85%, #ffffff 0%); }
+
+tei-l:hover { background: var(--line-bg-hover); }
+tei-l:focus-within { outline: 2px dashed var(--accent); outline-offset: 4px; }
+
+/* Numeric gutter from @n */
+tei-l::before {
+  content: attr(n) " ";
+  position: absolute;
+  left: .75rem;
+  top: .2rem;
+  width: 2.5rem;
+  text-align: right;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  opacity: .8;
+}
+
+/* If we're showing the "numbered in text" version, hide the gutter numbers to avoid duplication */
+#TEI[data-numbered="true"] tei-l::before { content: none; }
+
+/* Hemistichs */
+tei-seg { display: inline; padding: .05rem .1rem; border-radius: 6px; }
+tei-l:hover tei-seg { background: rgba(240, 198, 116, 0.10); }
+
+/* Caesura symbol rendered from element */
+tei-caesura::before {
+  content: var(--caesura);
+  white-space: pre;
+  letter-spacing: .04em;
+  opacity: .9;
+  padding: 0 .35rem;
+  color: var(--accent-2);
+}
+
+/* Entities */
+tei-persname[type="myth"],
+tei-persname[type="divine"] {
+  color: #ffd166;
+  font-variant: small-caps;
+  letter-spacing: .02em;
+}
+tei-placename { color: #a3e635; font-variant: small-caps; }
+tei-rs[type="astral"] { color: #7dd3fc; text-shadow: 0 0 8px rgba(125, 211, 252, 0.35); }
+
+/* Hide header */
+tei-teiHeader, tei-teiheader { display:none; }
+
+@media (max-width: 700px) {
+  tei-l { padding-left: 3rem; }
+  tei-l::before { left: .5rem; width: 2rem; }
+}
+
+@media print {
+  body { background: white; color: black; }
+  #TEI { padding: 0; }
+  tei-l { background: transparent; }
+  tei-l::before { color: #666; }
+}
