@@ -1,0 +1,121 @@
+body {
+    font-size: 14pt;
+    margin: 1cm;
+}
+
+tei-opener {
+    display: block;
+}
+
+tei-closer {
+    display: block;
+}
+
+tei-figure {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+tei-figDesc {
+    position: absolute;
+    top: 100%;
+    /* left: 0; */
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+tei-figure:hover tei-figDesc {
+    opacity: 1;
+    visibility: visible;
+}
+
+tei-figDesc {
+    font-style: italic;
+}
+
+tei-choice {
+    position: relative;
+}
+
+tei-expan {
+    position: relative;
+    /* color: blueviolet; */
+}
+
+tei-abbr {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+tei-choice {
+    color:#666;
+}
+
+
+tei-choice:hover tei-abbr {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+tei-orig {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+tei-choice:hover tei-orig {
+    opacity: 1;
+    visibility: visible;
+}
+
+tei-pc {
+    display: none;
+}
+
+tei-lb::before {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%); /* moves it completely to the left */
+  content: attr(n);
+  color: #666;
+  font-size: 0.8em;
+  padding-right: 10px; /* adds some space between number and content */
+}
+
+tei-del {
+    text-decoration: line-through;
+    color: red;
+}
+
+tei-add {
+    text-decoration: underline;
+    color: green;
+}
